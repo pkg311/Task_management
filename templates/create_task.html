@@ -1,0 +1,145 @@
+{% extends "dashboard.html" %}
+
+{% block body %}
+<style>
+    
+    .form-group form-primary {background-color:black;}
+    .sg-input-menu {color:white;}
+
+
+    .heads{ color: black, 
+            font-family: Arial Narrow,
+    }
+
+
+</style>
+
+        {% comment %} breadcrumb of create task  {% endcomment %}
+
+        <div class="page-header card">
+
+            <div class="row align-items-end">
+               <div class="col-lg-8">
+                  <div class="page-header-title">
+                     
+                  </div>
+               </div>
+               <div class="col-lg-4">
+                  <div class="page-header-breadcrumb">
+                     <ul class=" breadcrumb breadcrumb-title">
+                        <li class="breadcrumb-item">
+                           <a href="index-2.html"><i class="feather icon-home"></i></a>
+                        </li>
+                        <li class="breadcrumb-item"><a href="#!">Create Task</a> </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         {% comment %} form started  {% endcomment %}
+
+         <div class="container-fluid z-depth-5">
+            <div class="row">
+                <div class="col-sm-1"></div>
+               <div class="col-sm-8">
+                  <form class="md-float-material form-material" method="POST" action="/">
+                     {% csrf_token %}
+                     
+                     <div class="auth-box card">
+                        <div class="card-block">
+                           <div class="row m-b-20">
+                              <div class="col-md-12">
+                                 <h3 class="text-center txt-primary">Add Task</h3>
+                              </div>
+                           </div>
+                         
+                           <div class="form-group form-primary">
+                              <label class="heads">Task Name</label>
+                              <input type="text" name="Tname" class="form-control" required="">
+                              <span class="form-bar"></span>                             
+                           </div>
+
+
+                           <div class="form-group form-primary">
+                            <label class="heads">Task Description</label>
+                            <input type="text" name="Tname" class="form-control" required="">
+                            <span class="form-bar"></span>                             
+                         </div>
+
+                           <div class="row">
+                              <div class="col-sm-12">
+                                 <div class="form-group form-primary">
+                                    <label class = "heads"> Category </label>
+                                    <select name="category" class="form-control" required>
+                                       <option>Select Category</option>
+                                       <option value="Compliance">Compliance</option>
+                                       <option value="Report">Report</option>
+                                     </select>
+                                 </div>
+                              </div>
+                           </div>
+
+                           
+                          
+                           <div class="row">
+                            <div class="col-sm-12">
+                               <div class="form-group form-primary">
+                                <label class = "heads"> Priority </label>
+                                  <select name="priority" class="form-control" required>
+                                    <option value="low">Low</option>
+                                    <option value="high">High</option>
+                                    <option value="moderate">Moderate</option>
+                                    
+                                   </select>
+                               </div>
+                            </div>
+                         </div>
+
+                         
+                         <div class="form-group form-primary">
+                            <label class ="heads"> Add Attachment </label>
+                            <input type = "file" id="attachment" class="form-control" required=""> 
+                            <span class="form-bar"></span>
+                         </div>
+
+                         
+                         <div class="row m-t-30">
+                            <div class="col-md-12">
+                               <button class="btn btn-primary btn-md btn-block waves-effect text-center m-b-20" type="submit">Add</button>
+                            </div>
+                         </div>
+
+                         <div class="row">
+                            <div class="col-md-10">
+                               
+                            </div>
+                            <div class="col-md-2">
+                               <img src="/static/files/assets/images/adani_logo.png" width="100" height="100"  alt="logo.png">
+                            </div>
+                         </div>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+        <!DOCTYPE html>
+<html lang="en">
+
+
+
+    {% comment %} TId=models.AutoField(primary_key=True)
+    Tname=models.CharField(max_length=50)
+    TDescription=models.TextField(max_length=500)
+    Category=models.CharField(max_length=15)
+    CID = models.ForeignKey(COEMaster, null=True, on_delete=models.CASCADE)
+    Role_id=models.ForeignKey(RoleMaster, null=True, on_delete=models.CASCADE)
+    Tpriority=models.CharField(max_length=10)
+    status=models.CharField(max_length=10,default="Unassigned")
+    Rid=models.ForeignKey(RecurrenceMaster, null=True, on_delete=models.CASCADE)
+    Attachment=models.FileField(upload_to=None, max_length=254)
+    UID=models.ForeignKey(UserMaster, null=True, on_delete=models.CASCADE) {% endcomment %}
+   
+    
+
+{% endblock body %}

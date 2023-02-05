@@ -1,0 +1,77 @@
+{% extends "dashcoe.html" %}
+
+{% block body %}
+
+
+
+
+<div class="pcoded-inner-content">
+  <div class="main-body">
+     <div class="page-wrapper">
+        <div class="page-body">
+           <div class="row">
+
+            <br> <br> 
+            <div class="col-md-12">
+              <div class="card table-responsive">
+                  <div class="cards">
+                    <h3> Assign Tasks </h3> 
+                  </div>
+                  <br> 
+                  <br>
+       
+                    <table id="example" class="display" style="width:98%">
+                        <thead>
+                        
+                            <tr>
+                        
+                              <th>Sr.No</th>
+                              <th>Task</th>
+							  <th>Task Disscription</th>
+							  <th>Task Category</th>
+							  <th>Current User </th>
+                              <th>User </th> 
+                              <th>Role</th>
+                              <th> Assigned Tasks </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+						{% for i in Task  %}
+
+                            <tr>
+                              
+                              <form class="md-float-material form-material" method="POST" action="/assign/{{i.TId}}">
+								              {% csrf_token %}
+								
+                              <td> {{i.TId}}</td>
+                              <td> {{i.Tname}} </td> 
+							                <td> {{i.TDescription}} </td>
+							                <td> {{i.Category}} </td>
+											<td> {{i.UID}} </td>
+                              <td> <select name="Auser" id="id">
+                                  {% for j in user %}
+                                <option value="{{j.Uname}}">{{j.Uname}}</option>
+                                {% endfor %}
+                              </select> </td> 
+                              <td> {{i.Role_id}} </td>
+                              <td> <button type="submit"  class="assign" >Assign  </button></td> 
+							</form>
+                           
+                            </tr>
+                         {% endfor %}
+                        </tbody>
+                        
+                </table>
+
+
+                 
+       </div>
+   </div>
+
+   
+</div>
+</div>
+</div>
+</div>
+</div>
+{% endblock body%}

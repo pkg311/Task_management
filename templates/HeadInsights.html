@@ -1,0 +1,301 @@
+<script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+
+<style>
+    #myChart {
+        height: 100%;
+        width: 100%;
+        min-height: 150px;
+      }
+       
+      .zc-ref {
+        display: none;
+      }
+</style>
+{% extends "dashboard.html" %}
+
+{% block body %}
+
+
+<div class="page-header card">
+
+    <div class="row align-items-end">
+       <div class="col-lg-8">
+          <div class="page-header-title">
+             
+          </div>
+       </div>
+       
+    </div>
+ </div>
+ <div class="pcoded-inner-content">
+    <div class="main-body">
+       <div class="page-wrapper">
+          <div class="page-body">
+             <div class="row">
+
+                <div class="col-md-12 col-xl-6">
+                   <div class="card comp-card">
+                      <div class="card-body">
+                         <div class="row align-items-center">
+                            <div class="col">
+                               <h6 class="m-b-10">COE'S</h6>
+                               <h3 class="f-w-700 text-c-blue">25</h3>
+                               <p class="m-b-0">May 23 - June 01 (2022)</p>
+                            </div>
+                            <div class="col-auto">
+                               <i class="fas fa-eye bg-c-blue"></i>
+                            </div>
+                         </div>
+                      </div>
+                      <div class="card-body">
+                         <div class="row align-items-center">
+                            <div class="col">
+                               <h6 class="m-b-10">Divisions</h6>
+                               <h3 class="f-w-700 text-c-green">6</h3>
+                               <p class="m-b-0">May 23 - June 01 (2022)</p>
+                            </div>
+                            <div class="col-auto">
+                               <i class="fas fa-bullseye bg-c-green"></i>
+                            </div>
+                         </div>
+                      </div>
+                      <div class="card-body">
+                         <div class="row align-items-center">
+                            <div class="col">
+                               <h6 class="m-b-10">Total Employees</h6>
+                               <h3 class="f-w-700 text-c-yellow">450</h3>
+                               <p class="m-b-0">May 23 - June 01 (2022)</p>
+                            </div>
+                            <div class="col-auto">
+                               <i class="fas fa-hand-paper bg-c-yellow"></i>
+                            </div>
+                         </div>
+                      </div>
+                   </div>
+                </div>
+                <div class="col-xl-6 col-md-6">
+                   <div class="card latest-update-card">
+                      <div class="card-header">
+                         <h5>Latest Activity</h5>
+                         <div class="card-header-right">
+                            <ul class="list-unstyled card-option">
+                               <li class="first-opt"><i class="feather icon-chevron-left open-card-option"></i></li>
+                               <li><i class="feather icon-maximize full-card"></i></li>
+                               <li><i class="feather icon-minus minimize-card"></i></li>
+                               <li><i class="feather icon-refresh-cw reload-card"></i></li>
+                               <li><i class="feather icon-trash close-card"></i></li>
+                               <li><i class="feather icon-chevron-left open-card-option"></i></li>
+                            </ul>
+                         </div>
+                      </div>
+                      <div class="card-block , height:relative">
+                         <div class="scroll-widget">
+                            <div class="latest-update-box">
+                               <div class="row p-t-20 p-b-30">
+                                  <div class="col-auto text-right update-meta p-r-0">
+                                     <i class="b-primary update-icon ring"></i>
+                                  </div>
+                                  <div class="col p-l-5">
+                                     <a href="#!">
+                                        <h6>Devlopment & Update</h6>
+                                     </a>
+                                     <p class="text-muted m-b-0">Lorem ipsum dolor sit amet, <a href="#!" class="text-c-blue"> More</a></p>
+                                  </div>
+                               </div>
+                               <div class="row p-b-30">
+                                  <div class="col-auto text-right update-meta p-r-0">
+                                     <i class="b-primary update-icon ring"></i>
+                                  </div>
+                                  <div class="col p-l-5">
+                                     <a href="#!">
+                                        <h6>Showcases</h6>
+                                     </a>
+                                     <p class="text-muted m-b-0">Lorem dolor sit amet, <a href="#!" class="text-c-blue"> More</a></p>
+                                  </div>
+                               </div>
+                               <div class="row p-b-30">
+                                  <div class="col-auto text-right update-meta p-r-0">
+                                     <i class="b-success update-icon ring"></i>
+                                  </div>
+                                  <div class="col p-l-5">
+                                     <a href="#!">
+                                        <h6>Miscellaneous</h6>
+                                     </a>
+                                     <p class="text-muted m-b-0">Lorem ipsum dolor sit ipsum amet, <a href="#!" class="text-c-green"> More</a></p>
+                                  </div>
+                               </div>
+                               <div class="row p-b-30">
+                                  <div class="col-auto text-right update-meta p-r-0">
+                                     <i class="b-danger update-icon ring"></i>
+                                  </div>
+                                  <div class="col p-l-5">
+                                     <a href="#!">
+                                        <h6>Your Manager Posted.</h6>
+                                     </a>
+                                     <p class="text-muted m-b-0">Lorem ipsum dolor sit amet, <a href="#!" class="text-c-red"> More</a></p>
+                                  </div>
+                               </div>
+                               <div class="row p-b-30">
+                                  <div class="col-auto text-right update-meta p-r-0">
+                                     <i class="b-primary update-icon ring"></i>
+                                  </div>
+                                  <div class="col p-l-5">
+                                     <a href="#!">
+                                        <h6>Showcases</h6>
+                                     </a>
+                                     <p class="text-muted m-b-0">Lorem dolor sit amet, <a href="#!" class="text-c-blue"> More</a></p>
+                                  </div>
+                               </div>
+                               <div class="row">
+                                  <div class="col-auto text-right update-meta p-r-0">
+                                     <i class="b-success update-icon ring"></i>
+                                  </div>
+                                  <div class="col p-l-5">
+                                     <a href="#!">
+                                        <h6>Miscellaneous</h6>
+                                     </a>
+                                     <p class="text-muted m-b-0">Lorem ipsum dolor sit ipsum amet, <a href="#!" class="text-c-green"> More</a></p>
+                                  </div>
+                               </div>
+                            </div>
+                         </div>
+                      </div>
+                    </div>
+                </div>
+
+
+                      <div class="card-block , height:relative col-12">
+                        <div class="scroll-widget">
+                           <div class="latest-update-box">
+                            <div class="card-header">
+                                <h5>Progress Chart</h5>
+                                </div>
+                            <div id='myChart'><a class="zc-ref" href="https://www.zingchart.com/">Charts by ZingChart</a></div>
+                              
+                           </div>
+                        </div>
+                     </div>
+                   </div>
+                </div>
+                
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+   
+ 
+
+<script>
+    window.feed = function(callback) {
+        var tick = {};
+        tick.plot0 = Math.ceil(350 + (Math.random() * 500));
+        callback(JSON.stringify(tick));
+      };
+       
+      var myConfig = {
+        type: "gauge",
+        globals: {
+          fontSize: 15
+        },
+        plotarea: {
+          marginTop: 80
+        },
+        plot: {
+          size: '100%',
+          valueBox: {
+            placement: 'center',
+            text: '%v', //default
+            fontSize: 35,
+            rules: [{
+                rule: '%v >= 700',
+                
+              },
+              {
+                rule: '%v < 700 && %v > 640',
+                
+              },
+              {
+                rule: '%v < 640 && %v > 580',
+                
+              },
+              {
+                rule: '%v <  580',
+                
+              }
+            ]
+          }
+        },
+        tooltip: {
+          borderRadius: 5
+        },
+        scaleR: {
+          aperture: 180,
+          minValue: 'Pending',
+          maxValue: 'Completed',
+          step: 50,
+          center: {
+            visible: false
+          },
+          tick: {
+            visible: false
+          },
+          item: {
+            offsetR: 0,
+            rules: [{
+              rule: '%i == 9',
+              offsetX: 15
+            }]
+          },
+          labels: ['Pending', 'On-going','Completed'],
+          ring: {
+            size: 50,
+            rules: [{
+                rule: '%v <= 580',
+                backgroundColor: '#E53935'
+              },
+              {
+                rule: '%v > 580 && %v < 640',
+                backgroundColor: '#EF5350'
+              },
+              {
+                rule: '%v >= 640 && %v < 700',
+                backgroundColor: '#FFA726'
+              },
+              {
+                rule: '%v >= 700',
+                backgroundColor: '#29B6F6'
+              }
+            ]
+          }
+        },
+        refresh: {
+          type: "feed",
+          transport: "js",
+          url: "feed()",
+          interval: 1500,
+          resetTimeout: 1000
+        },
+        series: [{
+          values: [755], // starting value
+          backgroundColor: 'black',
+          indicator: [10, 10, 10, 10, 0.75],
+          animation: {
+            effect: 2,
+            method: 1,
+            sequence: 4,
+            speed: 900
+          },
+        }]
+      };
+       
+      zingchart.render({
+        id: 'myChart',
+        data: myConfig,
+        height: 500,
+        width: '100%'
+      });
+    </script>
+ {% endblock body %}
+
+ 

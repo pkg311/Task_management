@@ -1,0 +1,112 @@
+{% extends 'dashuser.html' %}
+
+{% block table %}
+                   <div class="col-md-12">
+                                        <div class="card table-card">
+                                            <div class="cards">
+                                              <h3> Users </h3> 
+                                            </div>
+                                            <br> 
+                                            
+                                                <table id="example1" class="display" style="width:98%">
+                                                    <thead>
+                                                    
+                                                        <tr>
+                                                            <th><input type="checkbox" class="selectall" id="select_all"></th>
+                                                         <tr>
+                                                         <th>Name</th>
+                                                         <th>Designation</th>
+                                                         <th>Division</th>
+                                                         <th>Status</th>
+                                                      </tr>
+                                                            
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        {% for i in user %}
+                                                    <tr>
+                                                        <td> <input type="checkbox"> </td>
+                                                        <td>{{i.Uname}}</td>
+                                                         <td>{{i.Utype}}</td>
+                                                         <td>{{i.CID}}</td>
+                                                         <td>{{i.isactive}}</td>
+                                                     </tr>
+                                                   {% endfor %}
+                                                       
+                                                    </tbody>
+                                                   
+                                            </table>
+                                            </div>
+                                        </div>                              
+{% endblock table %}
+  
+  
+  {% block script %}
+      <script>
+        $(document).ready(function () {
+            var mytbl = $("#example1").DataTable({
+                "dom": 'Bfrtip',
+                "pageLength": 10,
+                "order": [[1, 'asc']],
+                "columnDefs": [
+                    { 
+                    "ordering": false,
+                    "targets": 0,
+                    }
+                ],
+                "buttons": [
+                    {
+                        extend: 'print',
+                        exportOptions: {
+                            columns: [1, 2, 3, 4, 5 ] //Your Column value those you want
+                        }
+                    },
+                    {
+                        extend: 'colvis',
+                        columns: ':not(:first-child)'
+                    },
+                    {
+                        extend: 'excelHtml5',
+                        customize: function( xlsx ) {
+                            var sheet = xlsx.xl.worksheets['sheet1.xml'];
+                            $('row c[r^="C"]', sheet).attr( 's', '2' );
+                        }
+                    },
+                    
+                    {
+                        extend: 'collection',
+                        text: 'Status',
+                        buttons: [
+                            { text: 'Pending'},
+                            { text: 'In-progress'},
+                            { text: 'Completed'}
+                            ],
+                            fade: true
+                    },
+                   
+                    
+                ]
+            });
+
+            $('#select_all').on('click',function(){
+                if(this.checked){
+                    $('.checkbox').each(function(){
+                        this.checked = true;
+                    });
+                }else{
+                    $('.checkbox').each(function(){
+                        this.checked = false;
+                    });
+                }
+            });
+                
+            $('.checkbox').on('click',function(){
+                if($('.checkbox:checked').length == $('.checkbox').length){
+                    $('#select_all').prop('checked',true);
+                }else{
+                    $('#select_all').prop('checked',false);
+                }
+            });
+        });
+    </script>
+	{%endblock script%}

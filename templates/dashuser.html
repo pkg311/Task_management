@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+   <!-- Mirrored from demo.dashboardpack.com/admindek-html/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 27 Jan 2023 16:18:39 GMT -->
+   <head>
+      <title>Adani | Admin </title>
+      <!--[if lt IE 10]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="description" content="Admindek Bootstrap admin template made using Bootstrap 4 and it has huge amount of ready made feature, UI components, pages which completely fulfills any dashboard needs." />
+      <meta name="keywords" content="flat ui, admin Admin , Responsive, Landing, Bootstrap, App, Template, Mobile, iOS, Android, apple, creative app">
+      <meta name="author" content="colorlib" />
+      <link rel="icon" href="/static/files/assets/images/favicon.ico" type="image/x-icon">
+      <link href="/static/files/assets/pages/waves/css/googleapis1.css" rel="stylesheet">
+      <link href="/static/files/assets/pages/waves/css/googleapis2.css" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="/static/files/bower_components/bootstrap/css/bootstrap.min.css">
+      <link rel="stylesheet" href="/static/files/assets/pages/waves/css/waves.min.css" type="text/css" media="all">
+      <link rel="stylesheet" type="text/css" href="/static/files/assets/icon/feather/css/feather.css">
+      <link rel="stylesheet" type="text/css" href="/static/files/assets/css/font-awesome-n.min.css">
+      <link rel="stylesheet" href="/static/files/bower_components/chartist/css/chartist.css" type="text/css" media="all">
+      <link rel="stylesheet" type="text/css" href="/static/files/assets/css/style.css">
+      <link rel="stylesheet" type="text/css" href="/static/files/assets/css/widget.css">
+      
+      <link rel="stylesheet" href="/static/files/assets/css/dataTables.min.css">
+      <link rel="stylesheet" href="/static/files/assets/css/select.dataTables.min.css">
+      <link rel="stylesheet" href="/static/files/assets/css/buttons.dataTables.min.css">
+
+      <style> 
+
+         
+
+         .img-logo {
+         padding-left:8px!important;
+         width: 140px!important;
+         height: 28px!important;
+         vertical-align: middle;
+         border-style: none;
+         overflow-clip-margin: content-box;
+    overflow: clip;
+     }
+            #example{
+                margin: 10px 10px 10px 10px;
+            }
+
+            .table-responsive {
+                overflow-y:scroll!important;
+            }
+
+            .card{
+                padding: 15px 25px!important;
+            }
+
+            table.dataTable.display tbody tr.odd, table.dataTable.stripe tbody tr.odd {
+                background-color: lavender;
+            }
+
+            .dataTables_wrapper .dataTables_length, .dataTables_wrapper .dataTables_filter, .dataTables_wrapper .dataTables_info, .dataTables_wrapper .dataTables_processing, .dataTables_wrapper .dataTables_paginate {
+                color: inherit;
+                padding-right: 5px;
+            }
+
+            div.dt-buttons {
+                float: left;
+                padding-left: 5px;
+            }
+
+            table.dataTable.display tbody tr.odd>.sorting_1, table.dataTable.order-column.stripe tbody tr.odd>.sorting_1 {
+                background-color: lavender;
+            }
+
+            .pcoded-content{
+               background-image: url('/static/files/assets/images/Goodness.jpg')!important;
+               background-repeat: no-repeat!important;
+               background-attachment: fixed!important;
+               height: 1200px!important;
+               background-size: cover!important;
+
+            }
+
+            #mybody{
+               background-image: url('/static/files/assets/images/Goodness.jpg')!important;
+               background-repeat: no-repeat!important;
+               background-attachment: fixed!important;
+               background-size: cover!important;
+               height: auto!important;
+               
+            }
+
+      </style> 
+   </head>
+   <body>
+      <div class="loader-bg">
+         <div class="loader-bar"></div>
+      </div>
+      <div id="pcoded" class="pcoded">
+         <div class="pcoded-overlay-box"></div>
+         <div class="pcoded-container navbar-wrapper">
+            <nav class="navbar header-navbar pcoded-header">
+               <div class="navbar-wrapper">
+                  <div class="navbar-logo">
+                     <a href="index-2.html">
+                     <img alt="Adani Group - Growth with Goodness" src="/static/files/assets/images/logo1.png" class="img-logo" loading="lazy">
+                      </a>
+
+                      {% comment %} <img class="img-fluid" src="/static/files/assets/images/adani.png" alt="Theme-Logo"/> {% endcomment %}
+                    
+                     <a class="mobile-menu" id="mobile-collapse" href="#!">
+                     <i class="feather icon-menu icon-toggle-right"></i>
+                     </a>
+                     <a class="mobile-options waves-effect waves-light">
+                     <i class="feather icon-more-horizontal"></i>
+                     </a>
+                  </div>
+                  <div class="navbar-container container-fluid">
+                     
+                     <ul class="nav-right">
+                        <li class="header-notification">
+                           <div class="dropdown-primary dropdown">
+                              <div class="dropdown-toggle" data-toggle="dropdown">
+                                 <i class="feather icon-bell"></i>
+                                 <span class="badge bg-c-red">1</span>
+                              </div>
+                              <ul class="show-notification notification-view dropdown-menu" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                                 <li>
+                                    <h6>Notifications</h6>
+                                    <label class="label label-danger">New</label>
+                                 </li>
+
+                                 <li>
+                                    <div class="media">
+                                       <img class="img-radius" src="/static/files/assets/images/temp.jpg" alt="Generic placeholder image">
+                                       <div class="media-body">
+                                          <h5 class="notification-user">Sender</h5>
+                                          <p class="notification-msg">You have upcoming New Task.</p>
+                                          <span class="notification-time">30 minutes ago</span>
+                                       </div>
+                                    </div>
+                                 </li>
+                              </ul>
+                           </div>
+                        </li>
+                       
+                        <li class="user-profile header-notification">
+                           <div class="dropdown-primary dropdown">
+                              <div class="dropdown-toggle" data-toggle="dropdown">
+                                 <img src="/static/files/assets/images/avatar-4.jpg" class="img-radius" alt="User-Profile-Image">
+                                 <span>{{ user }}</span>
+                                 <i class="feather icon-chevron-down"></i>
+                              </div>
+                              <ul class="show-notification profile-notification dropdown-menu" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                                 
+                                 <li>
+                                    <a href="#">
+                                    <i class="feather icon-user"></i> Profile
+                                    </a>
+                                 </li>
+                                 
+                                 
+								  <li>
+                                    <a href="#">
+                                    <i class="feather icon-edit"></i> Forgot Password
+                                    </a>
+                                 </li>
+                                 <li>
+                                    <a href="/logout">
+                                    <i class="feather icon-log-out"></i> Logout
+                                    </a>
+                                 </li>
+                              </ul>
+                           </div>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </nav>
+        
+
+            <div class="pcoded-main-container">
+               <div class="pcoded-wrapper">
+                  <nav class="pcoded-navbar">
+                     <div class="nav-list">
+                        <div class="pcoded-inner-navbar main-menu">
+                           <div class="pcoded-navigation-label"></div>
+                           <ul class="pcoded-item pcoded-left-item">
+                              <li class="pcoded-hasmenu">
+                                 <a href="/log " class="waves-effect waves-dark">
+                                 <span class="pcoded-micon"><i class="feather icon-home"></i></span>
+                                 <span class="pcoded-mtext">Dashboard</span>
+                                 </a>                           
+                              </li>
+                           </ul>
+
+                        </div>
+                     </div>
+                  </nav>
+
+                  <div class="pcoded-content">
+                     {% block body %}
+                     
+                     <div class="page-header card">
+                        <div class="row align-items-end">
+                           <div class="col-lg-8">
+                              <div class="page-header-title">
+                                 
+                              </div>
+                           </div>
+                           
+                        </div>
+                     </div>
+                     <div class="pcoded-inner-content">
+                        <div class="main-body">
+                           <div class="page-wrapper">
+                              <div class="page-body">
+                                 <div class="row">
+                                    
+                                    
+                                    <div class="col-xl-12">
+                                       <div class="card proj-progress-card">
+                                          <div class="card-block">
+                                             <div class="row">
+                                                <div class="col-xl-3 col-md-6">
+                                                   <h6>Assigned Tasks</h6>
+                                                   <h5 class="m-b-30 f-w-700">{{T1}}<span class="text-c-green m-l-30"></span></h5>
+                                                   <div class="progress">
+                                                      <div class="progress-bar bg-c-red" style="width:{{T1}}%"></div>
+                                                   </div>
+                                                </div>
+                                                <div class="col-xl-3 col-md-6">
+                                                   <h6>Completed Tasks</h6>
+                                                   <h5 class="m-b-30 f-w-700">{{CT}}<span class="text-c-red m-l-10">{{PCT}}%</span></h5>
+                                                   <div class="progress">
+                                                      <div class="progress-bar bg-c-blue" style="width:{{PCT}}%"></div>
+                                                   </div>
+                                                </div>
+												<div class="col-xl-3 col-md-6">
+                                                   <h6>Ongoing Tasks</h6>
+                                                   <h5 class="m-b-30 f-w-700">{{OT}}<span class="text-c-green m-l-10">{{OPT}}%</span></h5>
+                                                   <div class="progress">
+                                                      <div class="progress-bar bg-c-yellow" style="width:{{OPT}}%"></div>
+                                                   </div>
+                                                </div>
+                                                <div class="col-xl-3 col-md-6">
+                                                   <h6>Pending Tasks</h6>
+                                                   <h5 class="m-b-30 f-w-700">{{PT}}<span class="text-c-green m-l-10">{{PPT}}%</span></h5>
+                                                   <div class="progress">
+                                                      <div class="progress-bar bg-c-green" style="width:{{PPT}}%"></div>
+                                                   </div>
+                                                </div>
+                                                
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+								
+
+									{% block table %}
+                                    <div class="col-md-12">
+                                        <div class="card table-responsive">
+                                            <div class="cards">
+                                              <h3> Task List </h3> 
+                                            </div>
+                                            <br> 
+                                            
+                                                <table id="example" class="display" style="width:98%">
+                                                    <thead>
+                                                    
+                                                        <tr>
+                                                            <th><input type="checkbox" class="selectall" id="select_all"></th>
+															<th>Sr.No</th>
+                                                         <th>Task</th>
+                                                         <th>Description</th>
+														 <th>Status</th>
+                                                         <th>COE</th>
+                                                         <th>Category</th>
+                                                         <th>Role</th>
+                                                         <th>Priority</th>
+                                                         <th>Recurrence</th>
+                                                         <th>Attachments</th>
+                                                         <th>Action</th>
+                                                         
+                                                            
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        {% for i in Task %}
+                                                    <tr>
+                                                        <td width="5%"> <input value="{{ i.TId }}"  class="checkbox" type="checkbox"> </td>
+														<td width="5%">{{ i.TId }}</td>
+                                                        <td width="10%">{{ i.Tname }}</td>
+                                                        <td width="20%">{{ i.TDescription }}</td>
+														<td width="10%">
+														{% if i.status == 'Pending'%}
+														<div class="bg-c-blue form-control">Pending</div>
+														{% elif i.status == 'InProgress'%}
+														<div class="bg-c-yellow form-control">In Progress</div>
+														{% else %}
+														
+														  <div class="bg-c-green form-control">Completed</div>
+														
+														{% endif %}
+														</td >
+                                                        <td>{{ i.CID }}</td>
+                                                        <td>{{ i.Category }}</td>
+                                                       <td>{{ i.Role_id }}</td>
+                                                       <td>{{ i.Tpriority }}</td>
+                                                        <td>{{ i.Rname }}</td>
+                                                        <td>{{ i.Attachment }}</td>
+                                                        <td>
+														{% if i.status == 'Pending'%}
+														<a href="/work_on/{{ i.TId }}">
+														 Start Task
+														</a>
+														{% elif i.status == 'InProgress'%}
+														<a href="/complete/{{ i.TId }}" >
+														Completed
+														</a>
+														{% else %}
+														
+														  Done
+														
+														{% endif %}
+														</td>
+                                                       
+                                                     </tr>
+                                                   {% endfor %}
+                                                       
+                                                    </tbody>
+                                                   
+                                            </table>
+                                            </div>
+                                        </div>
+										{% endblock table %}
+
+                                    </div>
+                                    
+                                          
+                                    </div>
+                                    </div>
+                                    
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  {% endblock body %}
+                  <div id="styleSelector"></div>
+               </div>
+            </div>
+
+
+         </div>
+      </div>
+
+      <script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript" src="/static/files/bower_components/jquery/js/jquery.min.js"></script>
+      <script type="text/javascript" src="/static/files/bower_components/jquery-ui/js/jquery-ui.min.js"></script>
+      <script type="text/javascript" src="/static/files/bower_components/popper.js/js/popper.min.js"></script>
+      <script type="text/javascript" src="/static/files/bower_components/bootstrap/js/bootstrap.min.js"></script>
+      <script src="/static/files/assets/pages/waves/js/waves.min.js"></script>
+      <script type="text/javascript" src="/static/files/bower_components/jquery-slimscroll/js/jquery.slimscroll.js"></script>
+      <script src="/static/files/assets/pages/chart/float/jquery.flot.js"></script>
+      <script src="/static/files/assets/pages/chart/float/jquery.flot.categories.js"></script>
+      <script src="/static/files/assets/pages/chart/float/curvedLines.js"></script>
+      <script src="/static/files/assets/pages/chart/float/jquery.flot.tooltip.min.js"></script>
+      <script src="/static/files/bower_components/chartist/js/chartist.js"></script>
+      <script src="/static/files/assets/pages/widget/amchart/amcharts.js"></script>
+      <script src="/static/files/assets/pages/widget/amchart/serial.js"></script>
+      <script src="/static/files/assets/pages/widget/amchart/light.js"></script>
+      <script src="/static/files/assets/js/pcoded.min.js"></script>
+      <script src="/static/files/assets/js/vertical/vertical-layout.min.js"></script>
+      <script type="text/javascript" src="/static/files/assets/pages/dashboard/custom-dashboard.min.js"></script>
+      <script type="text/javascript" src="/static/files/assets/js/script.min.js"></script>
+      {% comment %} <script src="https://code.jquery.com/jquery-3.5.1.js"></script> {% endcomment %}
+      <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+      <script src="https://cdn.datatables.net/select/1.5.0/js/dataTables.select.min.js"></script>
+      <script src="https://cdn.datatables.net/buttons/2.3.2/js/dataTables.buttons.min.js"></script>
+      <script src="https://cdn.datatables.net/buttons/2.3.2/js/buttons.print.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+      <script src="https://cdn.datatables.net/buttons/2.3.2/js/buttons.html5.min.js"></script>
+      <script src="https://cdn.datatables.net/buttons/2.3.2/js/buttons.colVis.min.js"></script> 
+      {% block script %}
+      <script>
+        $(document).ready(function () {
+            var mytbl = $("#example").DataTable({
+                "dom": 'Bfrtip',
+                "pageLength": 10,
+                "order": [[1, 'asc']],
+                "columnDefs": [
+                    { 
+                    "ordering": false,
+                    "targets": 0,
+                    }
+                ],
+                "buttons": [
+                    {
+                        extend: 'print',
+                        exportOptions: {
+                            columns: [1, 2, 3, 4, 5, 6,7,8,9,10 ] //Your Column value those you want
+                        }
+                    },
+                    {
+                        extend: 'colvis',
+                        columns: ':not(:first-child)'
+                    },
+                    {
+                        extend: 'excelHtml5',
+                        customize: function( xlsx ) {
+                            var sheet = xlsx.xl.worksheets['sheet1.xml'];
+                            $('row c[r^="C"]', sheet).attr( 's', '2' );
+                        }
+                    },
+                    
+                    {
+                        extend: 'collection',
+                        text: 'Status',
+                        buttons: [
+                            { text: 'Pending'},
+							{ text: 'Completed'},
+							{ text: 'In Progress'}
+                            
+                            ],
+                            fade: true
+                    },
+                ]
+            });
+
+            $('#select_all').on('click',function(){
+                if(this.checked){
+                    $('.checkbox').each(function(){
+                        this.checked = true;
+                    });
+                }else{
+                    $('.checkbox').each(function(){
+                        this.checked = false;
+                    });
+                }
+            });
+                
+            $('.checkbox').on('click',function(){
+                if($('.checkbox:checked').length == $('.checkbox').length){
+                    $('#select_all').prop('checked',true);
+                }else{
+                    $('#select_all').prop('checked',false);
+                }
+            });
+        });
+    </script>
+	{%endblock script%}
+    </body>
+   
+</html>

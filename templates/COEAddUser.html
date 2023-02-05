@@ -1,0 +1,134 @@
+{% extends "dashcoe.html" %}
+{% block body %}
+<style>
+    
+    .form-group form-primary {background-color:black;}
+    .sg-input-menu {color:white;}
+
+
+    .heads{ color: black, 
+            font-family: Arial Narrow,
+    }
+
+
+</style>
+
+        {% comment %} breadcrumb of create task  {% endcomment %}
+
+        <div class="page-header card">
+
+            <div class="row align-items-end">
+               <div class="col-lg-8">
+                  <div class="page-header-title">
+                     
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+
+         {% comment %} form started  {% endcomment %}
+
+         <div class="container-fluid z-depth-5">
+            <div class="row">
+                <div class="col-sm-2"></div>
+               <div class="col-sm-7">
+                  <form class="md-float-material form-material" method="POST" action="/CLAU">
+                     {% csrf_token %}
+                     
+                     <div class="auth-box card">
+                        <div class="card-block">
+                           <div class="row m-b-20">
+                              <div class="col-md-12">
+                                 <h3 class="text-center txt-primary">Add User</h3>
+                              </div>
+                           </div>
+
+                         
+                           <div class="form-group form-primary">
+                              <label class="heads">User Name</label>
+                              <input type="text" name="Uname" class="form-control" required="">
+                              <span class="form-bar"></span>                             
+                           </div>
+
+                           <div class="form-group form-primary">
+                              <label class = "heads"> Department </label>
+                              <select name="CID" class="form-control" required>
+                                 <option>Select Department</option>
+								 {% for i in coe %}
+                                 <option value="{{ i.CoeDivision }}">{{ i.CoeDivision }}</option>
+								 {% endfor %}
+                                 
+                               </select>
+                           </div>
+
+                           <div class="form-group form-primary">
+                              <label class = "heads"> Role </label>
+                              <select name="Utype" class="form-control" required>
+                                 <option>Select Role</option>
+                                 <option value="Employee">User</option>
+								 <option value="COE Leads">COE Leads</option>
+								 <option value="COE Head">COE Head</option>
+								
+                                 
+                               </select>
+                           </div>
+
+
+                  <div class="form-group form-primary">
+                            <label class="heads">Email</label>
+                            <input type="text" name="email" class="form-control" required="">
+                            <span class="form-bar"></span>                             
+                         </div>
+						 <div class="form-group form-primary">
+                            <label class="heads">Password</label>
+                            <input type="text" name="password" class="form-control" required="">
+                            <span class="form-bar"></span>                             
+                         </div>
+
+                         {% comment %} <div class="form-group form-primary">
+                            <label class ="heads"> User Photo </label>
+                            <input type = "file" id="attachment" name='img' class="form-control" > 
+                            <span class="form-bar"></span>
+                         </div> {% endcomment %}
+
+                         
+                         <div class="row m-t-30">
+                            <div class="col-md-12">
+                               <button class="btn btn-primary btn-md btn-block waves-effect text-center m-b-20" type="submit">Add</button>
+                            </div>
+                         </div>
+
+                         <div class="row">
+                            <div class="col-md-10">
+                               
+                            </div>
+                            <div class="col-md-2">
+                               <img src="/static/files/assets/images/logo1.png" width="50" height="20"  alt="logo.png">
+                            </div>
+                         </div>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+        <!DOCTYPE html>
+<html lang="en">
+
+
+
+    {% comment %} TId=models.AutoField(primary_key=True)
+    Tname=models.CharField(max_length=50)
+    TDescription=models.TextField(max_length=500)
+    Category=models.CharField(max_length=15)
+    CID = models.ForeignKey(COEMaster, null=True, on_delete=models.CASCADE)
+    Role_id=models.ForeignKey(RoleMaster, null=True, on_delete=models.CASCADE)
+    Tpriority=models.CharField(max_length=10)
+    status=models.CharField(max_length=10,default="Unassigned")
+    Rid=models.ForeignKey(RecurrenceMaster, null=True, on_delete=models.CASCADE)
+    Attachment=models.FileField(upload_to=None, max_length=254)
+    UID=models.ForeignKey(UserMaster, null=True, on_delete=models.CASCADE) {% endcomment %}
+   
+    
+
+{% endblock body %}
